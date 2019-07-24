@@ -1,0 +1,15 @@
+
+
+<%= form_for @duck do |f| %>
+  <label>Ducky's Name</label><br />
+  <%= f.text_field :name%><br />
+
+  <label>Ducky's Description</label><br />
+  <%= f.text_field :description%><br />
+
+  <label>Duck is For</label><br />
+  <%= f.label :student_id%>
+  <%=f.collection_select(:student_id, @students, :id, :name) %><br />
+
+<%= f.submit %>
+<% end %>

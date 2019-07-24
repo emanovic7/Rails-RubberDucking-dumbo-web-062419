@@ -1,0 +1,10 @@
+<h2>Duckie</h2>
+
+
+<p>Name: <%= @duck.name %></p>
+<p>Description: <%= @duck.description %></p>
+
+<p><%= link_to "modify this duckie", edit_duck_path(@duck) %></p>
+
+
+<p><%= link_to "all the duckies", ducks_path %></p>

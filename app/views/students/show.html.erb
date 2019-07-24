@@ -1,0 +1,20 @@
+<h3>Student Info</h3>
+
+<p>Name: <%= @student.name%></p>
+<p>Module: <%= @student.mod%></p>
+
+<h3>My Ducks</h3>
+
+<% if @student.ducks.length != 0%>
+  <ol>
+    <% @student.ducks.each do |duck| %>
+      <li><%= link_to duck.name, duck_path(duck) %></li>
+    <% end %>
+  </ol>
+<% else %>
+  This student has no ducks
+<% end %>
+
+
+<p><%= link_to "edit student", edit_student_path(@student)%></p>
+<p><%= link_to "all students", students_path %></p>
